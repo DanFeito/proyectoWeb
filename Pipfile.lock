@@ -5,7 +5,7 @@
         },
         "pipfile-spec": 6,
         "requires": {
-            "python_version": "3.12"
+            "python_version": "3.10.5"
         },
         "sources": [
             {
@@ -21,7 +21,7 @@
                 "sha256:3e1e3ecc849832fe52ccf2cb6686b7a55f82bb1d6aee72a58826471390335e47",
                 "sha256:c343bd80a0bec947a9860adb4c432ffa7db769836c64238fc34bdc3fec84d590"
             ],
-            "markers": "python_version >= '3.8'",
+            "markers": "python_version >= '3.10.5'",
             "version": "==3.8.1"
         },
         "astroid": {
@@ -29,7 +29,7 @@
                 "sha256:3eae9ea67c11c858cdd2c91337d2e816bd019ac897ca07d7b346ac10105fceb3",
                 "sha256:7099b5a60985529d8d46858befa103b82d0d05a5a5e8b816b5303ed96075e1d9"
             ],
-            "markers": "python_full_version >= '3.8.0'",
+            "markers": "python_full_version >= '3.10.5'",
             "version": "==3.2.3"
         },
         "certifi": {
@@ -149,7 +149,7 @@
                 "sha256:3ebe3c479ad625c4553aca177444d89b486b1d84982eeacded644afc0cf797ca",
                 "sha256:c36ca9ffb54365bdd2f8eb3eff7d2a21237f8452b57ace88b1ac615b7e815bd7"
             ],
-            "markers": "python_version >= '3.11'",
+            "markers": "python_version >= '3.10.5'",
             "version": "==0.3.8"
         },
         "django": {
