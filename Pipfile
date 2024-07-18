@@ -9,7 +9,6 @@ pylint = "*"
 requests = "*"
 psycopg2 = "*"
 pillow = "*"
-django-ckeditor = "*"
 
 [dev-packages]
 

@@ -1,11 +1,12 @@
+import django
 from django.db import models
+from ckeditor.fields import RichTextField
 
-# Create your models here.
 class Project(models.Model):
     title = models.CharField(max_length=200,verbose_name="Título")
-    description = models.TextField(max_length=2000,verbose_name="Descripción")
-    image = models.ImageField(upload_to="projects", verbose_name="Imagen")
-    created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
+    description = RichTextField(max_length=2000,verbose_name="Descripción")
+    image = models.ImageField(upload_to="projects", verbose_name="Imagen"null=True, )
+    created = models.DateTimeField(verbose_name="Fecha de creación", default=django.utils.timezone.now)
     updated = models.DateTimeField(auto_now=True, verbose_name="Fecha de edición")
     url = models.URLField(verbose_name="URL", null=True, blank=True)
 

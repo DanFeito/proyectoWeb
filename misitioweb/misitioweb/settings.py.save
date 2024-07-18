@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-s+o+ax5btg^m423l#419$&rt^=hze3+nq%p(e%m!$ehx8lpgj+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1','danfeito.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost','127.0.0.1','danfeitopythonanywhere.com' ]
 
 
 # Application definition
@@ -39,9 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
-    'portfolio.apps.PortfolioConfig',
+    'portfolio.apps.PortfolioConfig', 
     'contact',
     'social.apps.SocialConfig',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -81,12 +82,14 @@ WSGI_APPLICATION = 'misitioweb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'sqlite3.db',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mydb',
+        'USER': 'myuser',
+        'PASSWORD': 'mypass',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
@@ -125,8 +128,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -143,3 +145,16 @@ EMAIL_HOST_USER = 'ca54aa4aea36c8'
 EMAIL_HOST_PASSWORD = '65c811261c781c'
 EMAIL_PORT = '2525'
 
+# Ckeditor
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-',
+             'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['Maximize']
+        ]
+    }
+}
