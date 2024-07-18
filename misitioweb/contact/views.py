@@ -23,8 +23,8 @@ def contact(request):
                 #si todo va ok, redireccionamos a ?ok
                 return redirect(reverse('contact')+'?ok')
             except:
-                #si algo falla, redireccionamos a ?fail
-                return redirect(reverse('contact')+'?fail')
+                #si algo falla, redireccionamos a ?ko
+                return redirect(reverse('contact')+'?ko')
     else:
         form = ContactForm()
     return render(request, 'contact/contact.html', {'form': form})
